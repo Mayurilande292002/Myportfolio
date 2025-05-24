@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mayuri R. Lande - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
 </head>
 
 <body>
+  <!-- Navbar -->
   <nav class="navbar" aria-label="Primary Navigation">
     <div class="logo">Mayuri Lande</div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#education">Education</a></li>
-
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#certifications">Certifications</a></li>
@@ -24,13 +24,15 @@
     </ul>
   </nav>
 
-  <section id="home" class="section">
+  <!-- Home Section -->
+  <section id="home" class="section" data-aos="fade-in">
     <img src="MayuriL.png" alt="Mayuri R. Lande" class="profile-pic" />
-    <h1>Hello, I'm Mayuri R. Lande</h1>
+    <h1></h1> <!-- Typewriter effect here -->
     <p>Aspiring Web Developer & Tech Enthusiast | CSE Final Year Student</p>
   </section>
 
-  <section id="about" class="section">
+  <!-- About Section -->
+  <section id="about" class="section" data-aos="fade-up">
     <h2>About Me</h2>
     <p>
       I’m a final year Computer Science Engineering student from Pune, passionate about building responsive websites and
@@ -38,114 +40,85 @@
       that combine aesthetics and functionality.
     </p>
   </section>
-  <section id="education" class="section">
-    <h2>Education</h2>
 
+  <!-- Education Section -->
+  <section id="education" class="section" data-aos="fade-up">
+    <h2>Education</h2>
     <div class="education-block">
       <h3>B.E. in Computer Science and Engineering</h3>
       <p>
-        <strong>
-          <a href="https://csmssengg.org/" target="_blank" rel="noopener noreferrer">
-            CSMSS Chh. Shahu College of Engineering, Aurangabad
-          </a>
-        </strong><br>
+        <strong><a href="https://csmssengg.org/" target="_blank">CSMSS Chh. Shahu College of Engineering, Aurangabad</a></strong><br>
         CGPA: 6.97 | Year: 2020 – 2024
       </p>
     </div>
-
     <div class="education-block">
       <h3>HSC – 12th Grade</h3>
       <p>
-        <strong>
-          <a href="https://trimurtijrcollege.org/" target="_blank" rel="noopener noreferrer">
-            Tri Murti Public School & Junior College, Newasa
-          </a>
-        </strong><br>
+        <strong><a href="https://trimurtijrcollege.org/" target="_blank">Tri Murti Public School & Junior College, Newasa</a></strong><br>
         Percentage: 85% | Year: 2020
       </p>
     </div>
-
     <div class="education-block">
       <h3>SSC – 10th Grade</h3>
       <p>
-        <strong>
-          <a href="https://schools.org.in/aurangabad/27100300723/smt-rajabai-madhavlalji-dhoot-kanya-prashala.html"
-            target="_blank" rel="noopener noreferrer">
-            Smt. Rajabai Madhavlalji Dhoot Kanya Prashala, Gangapur
-          </a>
-        </strong><br>
+        <strong><a href="https://schools.org.in/aurangabad/27100300723/smt-rajabai-madhavlalji-dhoot-kanya-prashala.html" target="_blank">Smt. Rajabai Madhavlalji Dhoot Kanya Prashala</a></strong><br>
         Percentage: 88.40% | Year: 2018
       </p>
     </div>
   </section>
 
-
-
-  <section id="skills" class="section">
+  <!-- Skills Section -->
+  <section id="skills" class="section" data-aos="zoom-in-up">
     <h2>Skills</h2>
     <ul class="skills-list">
-      <li>Java</li>
-      <li>C</li>
-      <li>Python</li>
-      <li>SQL</li>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Power BI</li>
-      <li>MS Excel</li>
+      <li>Java</li><li>C</li><li>Python</li><li>SQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Power BI</li><li>MS Excel</li>
     </ul>
   </section>
 
-
-  <section id="certifications" class="section">
-    <h2>Certifications</h2>
-    <ul>
-      <li><a href="certificates/pantech python programming.pdf" target="_blank" rel="noopener noreferrer">Python
-          Programming – Pantech e-Learning</a></li>
-      <li><a href="certificates/cc.pdf" target="_blank" rel="noopener noreferrer">Cloud Computing – NPTEL</a></li>
-      <li><a href="certificates/Data Base Management System.pdf" target="_blank" rel="noopener noreferrer">DBMS – NPTEL</a></li>
-      <li><a href="certificates/SQL intellipaat.pdf" target="_blank" rel="noopener noreferrer">SQL – Intellipaat</a>
-      </li>
-      <li><a href="certificates/Power Bi.pdf" target="_blank" rel="noopener noreferrer">Power BI – Intellipaat</a></li>
-      <li><a href="certificates/python intellipaat-certificate.pdf" target="_blank" rel="noopener noreferrer">Python Training – Intellipaat</a></li>
-      
-      
-      
+  <!-- Certifications Section -->
+  <section id="certifications" class="section" data-aos="fade-up">
+    <h2 onclick="toggleCerts()" style="cursor: pointer;">Certifications ▼</h2>
+    <ul id="cert-list" style="display:none;">
+      <li><a href="certificates/pantech python programming.pdf" target="_blank">Python Programming – Pantech e-Learning</a></li>
+      <li><a href="certificates/cc.pdf" target="_blank">Cloud Computing – NPTEL</a></li>
+      <li><a href="certificates/Data Base Management System.pdf" target="_blank">DBMS – NPTEL</a></li>
+      <li><a href="certificates/SQL intellipaat.pdf" target="_blank">SQL – Intellipaat</a></li>
+      <li><a href="certificates/Power Bi.pdf" target="_blank">Power BI – Intellipaat</a></li>
+      <li><a href="certificates/python intellipaat-certificate.pdf" target="_blank">Python Training – Intellipaat</a></li>
     </ul>
   </section>
 
-  <section id="projects" class="section">
+  <!-- Projects Section -->
+  <section id="projects" class="section" data-aos="fade-up">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Website Builder</h3>
+    <div class="project"><h3>Website Builder</h3>
       <p><strong>Tech Used:</strong> Python, Frappe, MySQL, REST API</p>
-      <p>Developed a drag-and-drop tool to build custom websites without coding, targeting small businesses and non-tech
-        users. Integrated REST APIs for backend communication.</p>
+      <p>Drag-and-drop website builder for non-tech users. Integrated backend via REST APIs.</p>
     </div>
-    <div class="project">
-      <h3>College Placement System</h3>
+    <div class="project"><h3>College Placement System</h3>
       <p><strong>Tech Used:</strong> HTML, CSS, Java, SQL</p>
-      <p>A full-stack web app to streamline college placements. Features resume upload, job postings, and automated
-        interview scheduling.</p>
+      <p>Automates placement processes: resumes, job posting, and scheduling.</p>
     </div>
-    <div class="project">
-      <h3>Train Ticket Reservation System</h3>
+    <div class="project"><h3>Train Ticket Reservation System</h3>
       <p><strong>Tech Used:</strong> Django, Python, HTML/CSS, SQL</p>
-      <p>Online platform for booking and managing train tickets with features like seat availability, booking history,
-        and email confirmations.</p>
+      <p>Online ticket booking with availability checks and email confirmations.</p>
     </div>
   </section>
 
-
-  <section id="contact" class="section">
+  <!-- Contact Section -->
+  <section id="contact" class="section" data-aos="zoom-in">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:landemayuri29@gmail.com">landemayuri29@gmail.com</a></p>
     <p>Phone: +91 9307541260</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/mayuri-lande-4519a9251/" target="_blank"
-        rel="noopener noreferrer">linkedin.com/in/mayuri-lande-4519a9251</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/mayuri-lande-4519a9251/" target="_blank">linkedin.com/in/mayuri-lande-4519a9251</a></p>
   </section>
 
-  <script src="script.js"></script>
-</body>
+  <!-- Floating Contact Button -->
+  <a href="#contact" class="floating-contact">Contact</a>
 
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
 </html>
